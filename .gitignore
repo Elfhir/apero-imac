@@ -1,4 +1,22 @@
+# python 
 *.log
 *.pot
 *.pyc
 local_settings.py
+
+# annoying stuff
+*~
+.gitignore~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# specific project
+/others/doc/
+/others/stuff/
+/others/uml/
+/static/js/vendor/
