@@ -1,0 +1,19 @@
+/* TEAM */
+	Web Jedi Master : Jeremy Ta
+	Contact: contact@jeremy-ta.fr
+	Twitter: @Elfhir
+	From: Reims, France
+
+	Legendary Beta tester and Content editor : Guillaume Segado
+	From: Dijon, France
+
+/* THANKS */
+	IMAC engineer school,
+	its students, teachers, relatives.
+	
+
+/* SITE */
+	Last update: 1st of november 2013
+	Language: French
+	Doctype:HTML5
+	IDE: Sublime Text, FileZilla, Gimp, Django, Postgresql
