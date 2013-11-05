@@ -3,7 +3,7 @@ from models import *
 
 class ConsumerAdmin(admin.ModelAdmin):
 	model = Consumer
-	date_hierarchy = 'date_joined'
+	date_hierarchy = 'create_date'
 
 admin.site.register(Consumer, ConsumerAdmin)
 
