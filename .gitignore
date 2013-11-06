@@ -16,6 +16,7 @@ ehthumbs.db
 Thumbs.db
 
 # specific project
+/others/licence/
 /others/doc/
 /others/stuff/
 /others/uml/
