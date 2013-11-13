@@ -137,7 +137,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* Webicons by Adam Fairhead at Fairhead Creative http://fairheadcreative.com */
+/* Webicons by Adam Fairhead at Fairhead Creative http://fairheadcreative.com  https://github.com/adamfairhead/webicons */
 .webicon {
   display: inline-block;
   background-size: 100%;
@@ -2181,4 +2181,4 @@ table {
 
 /* Custom style */
 #container {
-  background: #00aeef; }
+  background: #444; }
