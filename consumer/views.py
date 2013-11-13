@@ -26,5 +26,6 @@ def profil_list(request):
 	
 	return render_to_response('profil_list.html', locals())
 
+def view_redirection(request):
 
-
+    return render_to_response('profil.html', locals())
