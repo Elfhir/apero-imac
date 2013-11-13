@@ -1,64 +1,54 @@
 {% extends "index.html" %}
 
-{% block header %}
- <div class="row">
-    <div class="large-12 columns">
+{% block header %}  
+ <nav class="top-bar">
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <h1>
+          <a href="#">
+            Apero IMAC
+          </a>
+        </h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="divider hide-for-small"></li>
+        <li class="has-dropdown not-click">
+          <a href="#">Review</a>
+          <ul class="dropdown">
+            <li><a href="/review/list/">List</a></li>
+            <li><a href="/review/item/1">Item</a></li>
+          </ul>
+        </li>
+        <li class="divider hide-for-small"></li>
+        <li class="has-dropdown not-click">
+          <a href="#">Product</a>
+          <ul class="dropdown">
+            <li><a href="/product/list/">List</a></li>
+            <li><a href="/product/item/1">Item</a></li>
+          </ul>
+        </li>
+        <li class="divider hide-for-small"></li>
+        <li class="has-dropdown not-click">
+          <a href="#">Consumer</a>
+          <ul class="dropdown">
+            <li><a href="/consumer/profil/">Profil</a></li>
+            <li><a href="/consumer/list/">List</a></li>
+            <li><a href="/consumer/edit/">Edit</a></li>
+            <li><a href="/consumer/connexion/">Connexion</a></li>
+            <li><a href="/consumer/delete/">Delete</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
  
-      <!-- Navigation -->
- 
-        <ul class="button-group">
-          <li><a href="#" class="button">Nav Item 1</a></li>
-          <li><a href="#" class="button">Nav Item 2</a></li>
-          <li><a href="#" class="button">Nav Item 3</a></li>
-        </ul>
- 
-      <!-- End Navigation -->
- 
- 
-      <!-- Header Content -->
- 
-        <div class="row">
- 
-          <div class="large-6 columns">
- 
-            <img src="http://placehold.it/500x500&text=Image"><br>
- 
-          </div>
- 
- 
-          <div class="large-6 columns">
- 
-            <h3 class="show-for-small">Header lol<hr/></h3>
- 
-            <div class="panel">
-              <h4 class="hide-for-small">Header lol<hr/></h4>
-            <i class="fi-music"></i>
-            <h5 class="subheader">Fusce ullamcorper mauris in eros dignissim molestie posuere felis blandit. Aliquam erat volutpat. Mauris ultricies posuere vehicula. Sed sit amet posuere erat. Quisque in ipsum non augue euismod dapibus non et eros. Pellentesque consectetur tempus mi iaculis bibendum. Ut vel dolor sed eros tincidunt volutpat ac eget leo.</h5>
-            </div>
- 
-          <div class="row">
-              <div class="large-6 small-6 columns">
-                <div class="panel">
-                  <h5>Header</h5>
-                <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
-                <a href="#" class="webicon facebook">BUTTON TIME!</a>
-                </div>
-              </div>
- 
-              <div class="large-6 small-6 columns">
-                <div class="panel">
-                  <h5>Header</h5>
-                <h6 class="subheader">Praesent placerat dui tincidunt elit suscipit sed.</h6>
-                <a href="#" class="small button">BUTTON TIME!</a>
-                </div>
-              </div>
-          </div>
- 
-          </div>
- 
-        </div>
- 
-      <!-- End Header Content -->
+  <!-- End Top Bar -->
 {% endblock header %}
  
 {% block container %}
