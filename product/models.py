@@ -3,6 +3,11 @@ from review.models import *
 
 # abstract
 class Product(models.Model):
+
+	class Meta:
+		abstract = True
+
+
 	slug = models.SlugField(max_length=200, blank = True)
 	name = models.CharField(max_length=200, blank = True)
 	price = models.CharField(max_length=200, blank = True)

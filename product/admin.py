@@ -1,8 +1,8 @@
 from django.contrib import admin
 from models import *
 
-class ProductAdmin(admin.ModelAdmin):
-	model = Product
+class DrinkAdmin(admin.ModelAdmin):
+	model = Drink
 	date_hierarchy = 'create_date'
 
-admin.site.register(Product, ProductAdmin)
+admin.site.register(Drink, DrinkAdmin)

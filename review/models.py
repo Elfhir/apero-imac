@@ -7,7 +7,9 @@ class Review(models.Model):
 	content = models.TextField(blank = True, null = True)
 	grade = models.DecimalField(max_digits=1, decimal_places=0, blank = True, null = True)
 	create_date = models.DateField(auto_now_add = True, auto_now=False, verbose_name="Date de publication")
-	product = models.OneToOneField(Product, blank = True, null = True)
+	
+	drink = models.OneToOneField(Drink, blank = True, null = True)
+	appetizer = models.OneToOneField(Appetizer, blank = True, null = True)
 
 	def __unicode__(self):
 		return u'%s %s' % (self.name, self.content)
