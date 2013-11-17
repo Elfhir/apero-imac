@@ -1,10 +1,9 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import ListView, DetailView
 from product.views import *
 
 
 urlpatterns = patterns('product.views',
-	url(r'^$', 'display_first_page'),
-	url(r'^list/', 'display_first_page'),
-	url(r'^list/(?P<page>\d{3})', 'display_other_page'),
-	url(r'^item/(?P<name>\w+)', 'display_item_by_name'),
+	url(r'(?P<pk>\d+)$', DetailDrink.as_view(), name='Drink'),
+	url(r'^$', ListView.as_view(model=Drink, context_object_name="object_list", template_name="product_list.html")),
 )

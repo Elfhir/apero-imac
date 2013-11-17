@@ -1,10 +1,9 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import ListView, DetailView
 from review.views import *
 
 
 urlpatterns = patterns('review.views',
-	url(r'^$', 'display_first_page'),
-	url(r'list/', 'display_first_page'),
-	url(r'list/(?P<page>\d{3})', 'display_other_page'),
-	url(r'item/(?P<name>\w+)', 'display_item_by_name'),
+	url(r'(?P<pk>\d+)$', DetailReview.as_view(), name='review'),
+	url(r'^$', ListView.as_view(model=Review, context_object_name="object_list", template_name="review_list.html")),
 )

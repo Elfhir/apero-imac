@@ -8,6 +8,8 @@ from django.contrib import databrowse
 
 # Classes for Databrowse
 from consumer.models import Consumer
+from product.models import Drink, Appetizer
+from review.models import Review
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -26,6 +28,6 @@ urlpatterns = patterns('',
 )
 
 # Register Classes for Databrowse
-databrowse.site.register(Consumer)
+databrowse.site.register(Consumer, Appetizer, Drink, Review)
 
 

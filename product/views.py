@@ -1,17 +1,27 @@
 from product.models import *
 from django.shortcuts import render_to_response
+from django.views.generic import ListView, DetailView
 from datetime import datetime
 
 
-def display_first_page(request):
-	
-	return render_to_response('product_list.html', locals())
+class ListDrink(ListView):
+	model = Drink
+	context_object_name = "product_list"
+	template_name = "product_list.html"
+	paginate_by = 5
 
-def display_other_page(request, page):
-	
-	return render_to_response('product_list.html', locals())
+class DetailDrink(DetailView):
+	model = Drink
+	context_object_name = "product"
+	template_name = "product.html"
 
-def display_item_by_name(request, name):
-	
-	return render_to_response('product.html', locals())
+class ListAppetizer(ListView):
+	model = Appetizer
+	context_object_name = "product_list"
+	template_name = "product_list.html"
+	paginate_by = 5
 
+class DetailAppetizer(DetailView):
+	model = Appetizer
+	context_object_name = "product"
+	template_name = "product.html"

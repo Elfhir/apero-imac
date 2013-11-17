@@ -1,19 +1,17 @@
 from review.models import *
 from django.shortcuts import render_to_response
+from django.views.generic import ListView, DetailView
 from datetime import datetime
 
 
-def display_first_page(request):
-	reviews = Review.objects.all();
-	
-	return render_to_response('review_list.html', locals())
+class ListReview(ListView):
+	model = Review
+	context_object_name = "review_list"
+	template_name = "review_list.html"
+	paginate_by = 5
 
-def display_other_page(request, page):
-	reviews = Review.objects.all();
-	
-	return render_to_response('review_list.html', locals())
 
-def display_item_by_name(request, name):
-	
-	return render_to_response('review.html', locals())
-
+class DetailReview(DetailView):
+	model = Review
+	context_object_name = "review"
+	template_name = "review.html"

@@ -59,7 +59,7 @@
 	
 		<div class="large-12 columns">
 			<div class="row">
-				{% for item in reviews|slice:":8" %}
+				{% for item in object_list|slice:":8" %}
 				<div class="large-3 small-6 columns">
 					<img src="http://placehold.it/1000x1000&text=Thumbnail">
 
@@ -73,7 +73,20 @@
 				{% endfor %}
 			</div>
 		</div>	
-	
+		
+
+{# Mise en forme de la pagination ici #}
+{% if is_paginated %}
+    <div class="pagination">
+           {% if page_obj.has_previous %}
+               <a href="?page={{ page_obj.previous_page_number }}">Précédente</a> —
+           {% endif %}
+           Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }} 
+           {% if page_obj.has_next %}
+              — <a href="?page={{ page_obj.next_page_number }}">Suivante</a>
+           {% endif %}
+    </div>
+{% endif %}	
 
 	<!-- End Thumbnails -->
 
