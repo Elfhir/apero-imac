@@ -1,55 +1,7 @@
 {% extends "index.html" %}
 
-
-{% block header %}	
- <nav class="top-bar">
-		<ul class="title-area">
-			<!-- Title Area -->
-			<li class="name">
-				<h1>
-					<a href="/">
-						Apero IMAC
-					</a>
-				</h1>
-			</li>
-			<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-		</ul>
-
-		<section class="top-bar-section">
-			<!-- Right Nav Section -->
-			<ul class="right">
-				<li class="divider hide-for-small"></li>
-				<li class="has-dropdown not-click">
-					<a href="#">Review</a>
-					<ul class="dropdown">
-						<li><a href="/review/list/">List</a></li>
-						<li><a href="/review/item/1">Item</a></li>
-					</ul>
-				</li>
-				<li class="divider hide-for-small"></li>
-				<li class="has-dropdown not-click">
-					<a href="#">Product</a>
-					<ul class="dropdown">
-						<li><a href="/product/list/">List</a></li>
-						<li><a href="/product/item/1">Item</a></li>
-					</ul>
-				</li>
-				<li class="divider hide-for-small"></li>
-				<li class="has-dropdown not-click">
-					<a href="#">Consumer</a>
-					<ul class="dropdown">
-						<li><a href="/consumer/profil/">Profil</a></li>
-						<li><a href="/consumer/list/">List</a></li>
-						<li><a href="/consumer/edit/">Edit</a></li>
-						<li><a href="/consumer/connexion/">Connexion</a></li>
-						<li><a href="/consumer/delete/">Delete</a></li>
-					</ul>
-				</li>
-			</ul>
-		</section>
-	</nav>
- 
-	<!-- End Top Bar -->
+{% block header %}  
+{% include "header.html" %}
 {% endblock header %}
 
 {% block container %}
@@ -164,29 +116,5 @@
 {% endblock container %}
 
 {% block footer %}
-	<!-- Footer -->
-
-	  <footer class="row primary">
-		<div class="large-12 columns"><hr />
-		  <div class="row">
-
-			<div class="large-6 columns">
-			  <p><a href="/about/">Conditions d'utilisations et droit d'auteur</a></p>
-			</div>
-
-			<div class="large-6 columns">
-			  <ul class="inline-list right">
-				<li><a href="http://www.jeremy-ta.fr">Jérémy Ta</a></li>
-				<li><a href="http://www.gsegado.eu">Guillaume Segado</a></li>
-				<li><a href="http://www.ingenieur-imac.fr">Ingenieur IMAC</a></li>
-				<li><a href="http://rickrolled.fr/">Not Rick Rolled</a></li>
-			  </ul>
-			</div>
-
-		  </div>
-		</div>
-	  </footer>
-
-	<!-- End Footer -->
-
+{% include "footer.html" %}
 {% endblock footer %}
